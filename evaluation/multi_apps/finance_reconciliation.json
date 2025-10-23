@@ -1,0 +1,148 @@
+{
+  "id": "finance_reconciliation",
+  "instruction": "I have a CSV file 'transactions_march.csv' and PDF receipts 'receipt1.pdf', 'receipt2.pdf' on my Desktop. Please open the CSV in LibreOffice Calc, categorize transactions by adding a 'Category' column (groceries, transport, dining), then create a summary report in LibreOffice Writer showing total spending per category and save it as 'expense_report_march.docx' on the Desktop.",
+  "related_apps": [
+    "libreoffice_calc",
+    "libreoffice_writer",
+    "evince",
+    "os"
+  ],
+  "human-ground-truth": {
+    "single-action": [
+      "`TYPING` libreoffice --calc",
+      "`PRESS` enter",
+      "`CLICK` on 'File' in the menu bar",
+      "`CLICK` on 'Open'",
+      "`TYPING` /home/user/Desktop/transactions_march.csv",
+      "`CLICK` on 'Open' button",
+      "`CLICK` on cell 'D1'",
+      "`TYPING` Category",
+      "`PRESS` enter",
+      "`CLICK` on cell 'D2'",
+      "`TYPING` groceries",
+      "`PRESS` enter",
+      "`CLICK` on cell 'D3'",
+      "`TYPING` transport",
+      "`PRESS` enter",
+      "`CLICK` on cell 'D4'",
+      "`TYPING` dining",
+      "`PRESS` enter",
+      "`CLICK` on cell 'D5'",
+      "`TYPING` groceries",
+      "`PRESS` enter",
+      "`HOTKEY` ['control', 's']",
+      "`TYPING` evince /home/user/Desktop/receipt1.pdf",
+      "`PRESS` enter",
+      "`CLICK` on the LibreOffice Calc window",
+      "`TYPING` evince /home/user/Desktop/receipt2.pdf",
+      "`PRESS` enter",
+      "`CLICK` on the LibreOffice Calc window",
+      "`TYPING` libreoffice --writer",
+      "`PRESS` enter",
+      "`TYPING` Expense Report - March 2025",
+      "`PRESS` enter",
+      "`PRESS` enter",
+      "`TYPING` Category Summary:",
+      "`PRESS` enter",
+      "`TYPING` Groceries: $156.42",
+      "`PRESS` enter",
+      "`TYPING` Transport: $45.80",
+      "`PRESS` enter",
+      "`TYPING` Dining: $89.25",
+      "`PRESS` enter",
+      "`PRESS` enter",
+      "`TYPING` Total: $291.47",
+      "`HOTKEY` ['control', 's']",
+      "`TYPING` /home/user/Desktop/expense_report_march.docx",
+      "`CLICK` on 'Save' button"
+    ],
+    "grouped-action": [
+      [
+        "`TYPING` libreoffice --calc",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on 'File' in the menu bar"
+      ],
+      [
+        "`CLICK` on 'Open'"
+      ],
+      [
+        "`TYPING` /home/user/Desktop/transactions_march.csv",
+        "`CLICK` on 'Open' button"
+      ],
+      [
+        "`CLICK` on cell 'D1'",
+        "`TYPING` Category",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on cell 'D2'",
+        "`TYPING` groceries",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on cell 'D3'",
+        "`TYPING` transport",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on cell 'D4'",
+        "`TYPING` dining",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on cell 'D5'",
+        "`TYPING` groceries",
+        "`PRESS` enter"
+      ],
+      [
+        "`HOTKEY` ['control', 's']"
+      ],
+      [
+        "`TYPING` evince /home/user/Desktop/receipt1.pdf",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on the LibreOffice Calc window"
+      ],
+      [
+        "`TYPING` evince /home/user/Desktop/receipt2.pdf",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on the LibreOffice Calc window"
+      ],
+      [
+        "`TYPING` libreoffice --writer",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` Expense Report - March 2025",
+        "`PRESS` enter",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` Category Summary:",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` Groceries: $156.42",
+        "`PRESS` enter",
+        "`TYPING` Transport: $45.80",
+        "`PRESS` enter",
+        "`TYPING` Dining: $89.25",
+        "`PRESS` enter",
+        "`PRESS` enter",
+        "`TYPING` Total: $291.47"
+      ],
+      [
+        "`HOTKEY` ['control', 's']"
+      ],
+      [
+        "`TYPING` /home/user/Desktop/expense_report_march.docx",
+        "`CLICK` on 'Save' button"
+      ]
+    ]
+  }
+}

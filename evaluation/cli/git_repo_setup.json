@@ -1,0 +1,67 @@
+{
+  "id": "git_repo_setup",
+  "instruction": "Please create a new Git repository in /home/user/projects/my-app, initialize it, create a README.md file with the text 'My Application Project', create a .gitignore file that excludes *.log and node_modules/, stage all files, and commit with the message 'Initial commit with project setup'.",
+  "related_apps": [
+    "terminal",
+    "git",
+    "os"
+  ],
+  "human-ground-truth": {
+    "single-action": [
+      "`HOTKEY` ['control', 'alt', 't']",
+      "`TYPING` mkdir -p /home/user/projects/my-app",
+      "`PRESS` enter",
+      "`TYPING` cd /home/user/projects/my-app",
+      "`PRESS` enter",
+      "`TYPING` git init",
+      "`PRESS` enter",
+      "`TYPING` echo 'My Application Project' > README.md",
+      "`PRESS` enter",
+      "`TYPING` echo '*.log' > .gitignore",
+      "`PRESS` enter",
+      "`TYPING` echo 'node_modules/' >> .gitignore",
+      "`PRESS` enter",
+      "`TYPING` git add .",
+      "`PRESS` enter",
+      "`TYPING` git commit -m 'Initial commit with project setup'",
+      "`PRESS` enter"
+    ],
+    "grouped-action": [
+      [
+        "`HOTKEY` ['control', 'alt', 't']"
+      ],
+      [
+        "`TYPING` mkdir -p /home/user/projects/my-app",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` cd /home/user/projects/my-app",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` git init",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` echo 'My Application Project' > README.md",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` echo '*.log' > .gitignore",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` echo 'node_modules/' >> .gitignore",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` git add .",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` git commit -m 'Initial commit with project setup'",
+        "`PRESS` enter"
+      ]
+    ]
+  }
+}

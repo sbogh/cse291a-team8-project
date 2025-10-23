@@ -1,0 +1,130 @@
+{
+  "id": "audio_editing",
+  "instruction": "I have a podcast recording 'interview.wav' on my Desktop. Please open it in Audacity, remove all silence longer than 1 second, normalize the audio to -3dB, and export it as 'interview_edited.mp3'. Then open the edited MP3 file in VLC Media Player to verify the audio quality and take a screenshot of VLC playing the file, saving it as 'audio_verification.png' on the Desktop.",
+  "related_apps": [
+    "audacity",
+    "vlc",
+    "gnome_screenshot",
+    "os"
+  ],
+  "human-ground-truth": {
+    "single-action": [
+      "`TYPING` audacity",
+      "`PRESS` enter",
+      "`CLICK` on 'File' in the menu bar",
+      "`CLICK` on 'Open'",
+      "`TYPING` /home/user/Desktop/interview.wav",
+      "`CLICK` on 'Open' button",
+      "`CLICK` on 'Effect' in the menu bar",
+      "`CLICK` on 'Truncate Silence'",
+      "`CLICK` on the 'Minimum silence duration' field",
+      "`TYPING` 1.0",
+      "`CLICK` on 'Apply' button",
+      "`CLICK` on 'Effect' in the menu bar",
+      "`CLICK` on 'Normalize'",
+      "`CLICK` on the 'Normalize peak amplitude to' field",
+      "`TYPING` -3.0",
+      "`CLICK` on 'Apply' button",
+      "`CLICK` on 'File' in the menu bar",
+      "`CLICK` on 'Export'",
+      "`CLICK` on 'Export as MP3'",
+      "`TYPING` /home/user/Desktop/interview_edited.mp3",
+      "`CLICK` on 'Save' button",
+      "`CLICK` on 'OK' button",
+      "`TYPING` vlc",
+      "`PRESS` enter",
+      "`CLICK` on 'Media' in the menu bar",
+      "`CLICK` on 'Open File'",
+      "`TYPING` /home/user/Desktop/interview_edited.mp3",
+      "`CLICK` on 'Open' button",
+      "`CLICK` on the play button",
+      "`TYPING` gnome-screenshot -w",
+      "`PRESS` enter",
+      "`CLICK` on the VLC window",
+      "`CLICK` on 'Save' button",
+      "`TYPING` /home/user/Desktop/audio_verification.png",
+      "`CLICK` on 'Save' button"
+    ],
+    "grouped-action": [
+      [
+        "`TYPING` audacity",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on 'File' in the menu bar"
+      ],
+      [
+        "`CLICK` on 'Open'"
+      ],
+      [
+        "`TYPING` /home/user/Desktop/interview.wav",
+        "`CLICK` on 'Open' button"
+      ],
+      [
+        "`CLICK` on 'Effect' in the menu bar"
+      ],
+      [
+        "`CLICK` on 'Truncate Silence'"
+      ],
+      [
+        "`CLICK` on the 'Minimum silence duration' field",
+        "`TYPING` 1.0",
+        "`CLICK` on 'Apply' button"
+      ],
+      [
+        "`CLICK` on 'Effect' in the menu bar"
+      ],
+      [
+        "`CLICK` on 'Normalize'"
+      ],
+      [
+        "`CLICK` on the 'Normalize peak amplitude to' field",
+        "`TYPING` -3.0",
+        "`CLICK` on 'Apply' button"
+      ],
+      [
+        "`CLICK` on 'File' in the menu bar"
+      ],
+      [
+        "`CLICK` on 'Export'",
+        "`CLICK` on 'Export as MP3'"
+      ],
+      [
+        "`TYPING` /home/user/Desktop/interview_edited.mp3",
+        "`CLICK` on 'Save' button"
+      ],
+      [
+        "`CLICK` on 'OK' button"
+      ],
+      [
+        "`TYPING` vlc",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on 'Media' in the menu bar"
+      ],
+      [
+        "`CLICK` on 'Open File'"
+      ],
+      [
+        "`TYPING` /home/user/Desktop/interview_edited.mp3",
+        "`CLICK` on 'Open' button"
+      ],
+      [
+        "`CLICK` on the play button"
+      ],
+      [
+        "`TYPING` gnome-screenshot -w",
+        "`PRESS` enter"
+      ],
+      [
+        "`CLICK` on the VLC window"
+      ],
+      [
+        "`CLICK` on 'Save' button",
+        "`TYPING` /home/user/Desktop/audio_verification.png",
+        "`CLICK` on 'Save' button"
+      ]
+    ]
+  }
+}
