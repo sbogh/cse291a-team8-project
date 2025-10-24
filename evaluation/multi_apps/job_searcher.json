@@ -1,0 +1,176 @@
+{
+    "id": "job_searcher",
+    "snapshot": "os",
+    "instruction": "Open '/home/user/Documents/resume.pdf' to review my qualifications and experience. Then open Google Chrome and go to 'https://www.indeed.com/'. Search for 'Software Engineer' positions in the United States. Review the first page of results and identify the top 3 roles that best align with my background, skills, and preferences specified in '/home/user/Documents/job_preferences.odt'. For each selected job, record the job title, company, and job link in a new spreadsheet using LibreOffice Calc, and save it to '/home/user/Documents/job_matches.ods'.",
+    "source": "custom",
+    "config": [
+        {
+            "type": "download",
+            "parameters": {
+                "files": [
+                    {
+                        "url": "https://raw.githubusercontent.com/sbogh/cse291a-team8-project/main/data/files/resume.pdf",
+                        "path": "/home/user/Documents/resume.pdf"
+                    },
+                    {
+                        "url": "https://raw.githubusercontent.com/sbogh/cse291a-team8-project/main/data/files/job_preferences.odt",
+                        "path": "/home/user/Documents/job_preferences.odt"
+                    }
+                ]
+            }
+        }
+    ],
+    "trajectory": "trajectories/job_searcher",
+    "related_apps": ["libreoffice_writer", "libreoffice_calc", "chrome", "file_manager", "pdf_viewer"],
+    "evaluator": {},
+    "human-ground-truth": {
+        "single-action": [
+            "`CLICK` on the application launcher",
+            "`TYPING` 'Files'",
+            "`PRESS` Enter to open the file manager",
+            "`DOUBLE_CLICK` /home/user/Documents/resume.pdf to open it in the PDF viewer",
+            "`WAIT` for the resume to load",
+            "`SCROLL` down to briefly review the resume",
+            "`PRESS` 'Ctrl+W' to close the PDF viewer",
+            "`DOUBLE_CLICK` /home/user/job_preferences.odt to open it in LibreOffice Writer",
+            "`WAIT` for the document to load",
+            "`SCROLL` through the file to review job preferences (salary, tech stack, specialization)",
+            "`PRESS` 'Ctrl+W' to close LibreOffice Writer",
+            "`CLICK` on the application launcher",
+            "`TYPING` 'Google Chrome'",
+            "`PRESS` Enter to open Chrome",
+            "`WAIT` for Chrome to load",
+            "`TYPING` 'https://www.indeed.com/' in the address bar",
+            "`PRESS` Enter to navigate to the Indeed homepage",
+            "`WAIT` for the page to load",
+            "`CLICK` on the search bar labeled 'Job title, keywords, or company'",
+            "`TYPING` 'Software Engineer'",
+            "`CLICK` on the search bar labeled 'City, state, zip code, or \"remote\"'",
+            "`TYPING` 'United States'",
+            "`CLICK` the suggested dropdown option for 'United States'",
+            "`CLICK` on the 'Find Jobs' or 'Search' button",
+            "`WAIT` for the search results page to load",
+            "`CLICK` on each job listing",
+            "`SCROLL` through each listing to review qualifications and specifications",
+            "`CLICK` on the application launcher",
+            "`TYPING` 'LibreOffice Calc'",
+            "`PRESS` Enter to open a new spreadsheet",
+            "`WAIT` for Calc to load",
+
+            "`CLICK` on cell A1",
+            "`TYPING` 'Job Title'",
+            "`PRESS` Tab",
+            "`TYPING` 'Company'",
+            "`PRESS` Tab",
+            "`TYPING` 'Link'",
+            "`PRESS` Enter",
+
+            "`CLICK` on cell A2",
+            "`TYPING` 'Software Engineer I'",
+            "`PRESS` Tab",
+            "`TYPING` 'TechCorp'",
+            "`PRESS` Tab",
+            "`TYPING` 'https://www.indeed.com/viewjob?jk=111'",
+            "`PRESS` Enter",
+
+            "`CLICK` on cell A3",
+            "`TYPING` 'Backend Developer'",
+            "`PRESS` Tab",
+            "`TYPING` 'DataWorks Inc.'",
+            "`PRESS` Tab",
+            "`TYPING` 'https://www.indeed.com/viewjob?jk=222'",
+            "`PRESS` Enter",
+
+            "`CLICK` on cell A4",
+            "`TYPING` 'Full Stack Engineer'",
+            "`PRESS` Tab",
+            "`TYPING` 'InnovateX'",
+            "`PRESS` Tab",
+            "`TYPING` 'https://www.indeed.com/viewjob?jk=333'",
+            "`PRESS` Enter",
+
+            "`HOTKEY` 'Ctrl+S' to save the spreadsheet",
+            "`TYPING` '/home/user/Documents/job_matches.ods'",
+            "`PRESS` Enter to confirm save location",
+            "`PRESS` 'Ctrl+W' to close LibreOffice Calc"
+        ],
+        "grouped-action": [
+            [
+                "`CLICK` on the application launcher",
+                "`TYPING` 'Files'",
+                "`PRESS` Enter to open the file manager",
+                "`DOUBLE_CLICK` /home/user/Documents/resume.pdf to open it in the PDF viewer",
+                "`WAIT` for the resume to load",
+                "`SCROLL` down to briefly review the resume",
+                "`PRESS` 'Ctrl+W' to close the PDF viewer"
+            ],
+            [
+                "`DOUBLE_CLICK` /home/user/job_preferences.odt to open it in LibreOffice Writer",
+                "`WAIT` for the document to load",
+                "`SCROLL` through the file to review job preferences (salary, tech stack, specialization)",
+                "`PRESS` 'Ctrl+W' to close LibreOffice Writer"
+            ],
+            [
+                "`CLICK` on the application launcher",
+                "`TYPING` 'Google Chrome'",
+                "`PRESS` Enter to open Chrome",
+                "`WAIT` for Chrome to load",
+                "`TYPING` 'https://www.indeed.com/' in the address bar",
+                "`PRESS` Enter to navigate to the Indeed homepage",
+                "`WAIT` for the page to load",
+                "`CLICK` on the search bar labeled 'Job title, keywords, or company'",
+                "`TYPING` 'Software Engineer'",
+                "`CLICK` on the search bar labeled 'City, state, zip code, or \"remote\"'",
+                "`TYPING` 'United States'",
+                "`CLICK` the suggested dropdown option for 'United States'",
+                "`CLICK` on the 'Find Jobs' or 'Search' button",
+                "`WAIT` for the search results page to load",
+                "`CLICK` on each job listing",
+                "`SCROLL` through each listing to review qualifications and specifications"
+            ],
+            [
+                "`CLICK` on the application launcher",
+                "`TYPING` 'LibreOffice Calc'",
+                "`PRESS` Enter to open a new spreadsheet",
+                "`WAIT` for Calc to load",
+
+                "`CLICK` on cell A1",
+                "`TYPING` 'Job Title'",
+                "`PRESS` Tab",
+                "`TYPING` 'Company'",
+                "`PRESS` Tab",
+                "`TYPING` 'Link'",
+                "`PRESS` Enter",
+
+                "`CLICK` on cell A2",
+                "`TYPING` 'Software Engineer I'",
+                "`PRESS` Tab",
+                "`TYPING` 'TechCorp'",
+                "`PRESS` Tab",
+                "`TYPING` 'https://www.indeed.com/viewjob?jk=111'",
+                "`PRESS` Enter",
+
+                "`CLICK` on cell A3",
+                "`TYPING` 'Backend Developer'",
+                "`PRESS` Tab",
+                "`TYPING` 'DataWorks Inc.'",
+                "`PRESS` Tab",
+                "`TYPING` 'https://www.indeed.com/viewjob?jk=222'",
+                "`PRESS` Enter",
+
+                "`CLICK` on cell A4",
+                "`TYPING` 'Full Stack Engineer'",
+                "`PRESS` Tab",
+                "`TYPING` 'InnovateX'",
+                "`PRESS` Tab",
+                "`TYPING` 'https://www.indeed.com/viewjob?jk=333'",
+                "`PRESS` Enter",
+
+                "`HOTKEY` 'Ctrl+S' to save the spreadsheet",
+                "`TYPING` '/home/user/Documents/job_matches.ods'",
+                "`PRESS` Enter to confirm save location",
+                "`PRESS` 'Ctrl+W' to close LibreOffice Calc"
+            ]
+        ]
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "id": "rename_screenshots",
+    "snapshot": "os",
+    "instruction": "For each default-named Screenshot file of .png format in \"home/user/Desktop\", rename the file using a <24 character valid filename that summarizes the content shown in the image. The file name should no longer contain the word \"screenshot\" after being renamed.",
+    "source": "custom",
+    "config": [
+        {
+            "type": "download",
+            "parameters": {
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/sbogh/cse291a-team8-project/main/data/images/Screenshot%20from%202025-10-22%2001-54-13.png",
+                    "path": "home/user/Desktop/Screenshot from 2025-10-22 01-54-13.png"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/sbogh/cse291a-team8-project/main/data/images/Screenshot%20from%202025-10-22%2017-33-00.png",
+                    "path": "home/user/Desktop/Screenshot from 2025-10-22 17-33-00.png"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jigsawpieces/dog-api-images/main/corgi/IMG_3428.jpg",
+                    "path": "home/user/Desktop/Screenshot from 2025-10-23 12-31-02.png"
+                }
+            ]
+            }
+        }
+    ],
+    "trajectory": "trajectories/rename_screenshots",
+    "related_apps": [
+        "file_manager",
+        "image_viewer"
+    ],
+    "evaluator": "evaluation_dir",
+    "human-ground-truth": {
+        "single-action": [
+            "`CLICK` file manager icon on dock",
+            "`CLICK` Desktop folder in sidebar",
+            "`CLICK` 'Screenshot from 2025-10-22 01-54-13.png'",
+            "`PRESS` F2",
+            "`TYPING` 'force_quit_applications.png'",
+            "`PRESS` enter",
+            "`CLICK` 'Screenshot from 2025-10-22 17-33-00.png'",
+            "`PRESS` F2",
+            "`TYPING` 'mechanical_baby_yoda.png'",
+            "`PRESS` enter",
+            "`CLICK` 'Screenshot from 2025-10-23 12-31-02.png'",
+            "`PRESS` F2",
+            "`TYPING` 'corgi_puppy.png'",
+            "`PRESS` enter"
+        ],
+        "grouped-action": [
+            [
+                "`CLICK` file manager icon on dock",
+                "`CLICK` Desktop folder in sidebar"
+            ],
+            [
+                "`CLICK` 'Screenshot from 2025-10-22 01-54-13.png'",
+                "`PRESS` F2",
+                "`TYPING` 'force_quit_applications.png'",
+                "`PRESS` enter"
+            ],
+            [
+                "`CLICK` 'Screenshot from 2025-10-22 17-33-00.png'",
+                "`PRESS` F2",
+                "`TYPING` 'mechanical_baby_yoda.png'",
+                "`PRESS` enter"
+            ],
+            [
+                "`CLICK` 'Screenshot from 2025-10-23 12-31-02.png'",
+                "`PRESS` F2",
+                "`TYPING` 'corgi_puppy.png'",
+                "`PRESS` enter"
+            ]
+        ]
+    }
+}
