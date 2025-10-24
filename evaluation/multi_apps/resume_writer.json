@@ -1,0 +1,46 @@
+{
+  "id": "resume_writer",
+  "instruction": "I have a spreadsheet 'jobs.ods'. Take this and my resume 'resume.odt' and adjust my resume to fit each job description. Save each as a new file, with the new name 'resume_company_job.docx'.",
+  "related_apps": [
+    "libreoffice_writer",
+    "libreoffice_calc",
+    "os",
+    "terminal"
+  ],
+  "human-ground-truth": {
+    "single-action": [
+      "`HOTKEY` ['control', 'alt', 't']",
+      "`TYPING` libreoffice --calc jobs.ods",
+      "`PRESS` enter",
+      "`TYPING` libreoffice --writer resume.odt",
+      "`PRESS` enter",
+      "`TYPING` changes to resume based on job description",
+      "`PRESS` 'File' in menu toolbar",
+      "`PRESS` 'Save As' in 'File' in menu toolbar",
+      "`TYPING` resume_company1_job1.odt",
+      "`PRESS` enter"
+    ],
+    "grouped-action": [
+      [
+        "`HOTKEY` ['control', 'alt', 't']"
+      ],
+      [
+        "`TYPING` libreoffice --calc jobs.ods",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` libreoffice --writer resume.odt",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` changes to resume based on job description"
+      ],
+      [
+        "`PRESS` 'File' in menu toolbar",
+        "`PRESS` 'Save As' in 'File' in menu toolbar",
+        "`TYPING` resume_company1_job1.odt",
+        "`PRESS` enter"
+      ]
+    ]
+  }
+}

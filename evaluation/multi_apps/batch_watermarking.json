@@ -1,9 +1,10 @@
 {
     "id": "batch_watermarking",
     "instruction": "Take the images found in '/images' ('image1.jpg') and add a text watermark saying 'cse291a' to each image.",
-    "related_apps": ["os", "gimp"],
+    "related_apps": ["os", "gimp", "terminal"],
     "human-ground-truth": {
         "single-action": [
+            "`HOTKEY` ['control', 'alt', 't']",
             "`TYPING` gimp",
             "`PRESS` enter",
             "`CLICK` on 'File' in the menu bar",
@@ -28,6 +29,9 @@
             "`PRESS` 'Save'"
         ],
     "grouped-action": [ 
+        [
+            "`HOTKEY` ['control', 'alt', 't']"
+        ],
         [
             "`TYPING` gimp",
             "`PRESS` enter"

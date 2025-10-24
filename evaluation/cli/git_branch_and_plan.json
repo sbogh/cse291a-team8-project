@@ -1,0 +1,49 @@
+{
+  "id": "git_branch_and_plan",
+  "instruction": "Please create a new branch from the current branch and make a plan to pull out functionality of math functions to a utility file and place it at the root of the project titled 'plan.md'.",
+  "related_apps": [
+    "terminal",
+    "git",
+    "os"
+  ],
+  "human-ground-truth": {
+    "single-action": [
+      "`HOTKEY` ['control', 'alt', 't']",
+      "`TYPING` git checkout -b add_utility_file",
+      "`PRESS` enter",
+      "`TYPING` cd $(git rev-parse --show-toplevel)",
+      "`PRESS` enter",
+      "`TYPING` nano plan.md",
+      "`PRESS` enter",
+      "`HOTKEY` ['control', 'o']",
+      "`PRESS` enter",
+      "`HOTKEY` ['control', 'x']"
+    ],
+    "grouped-action": [
+      [
+        "`HOTKEY` ['control', 'alt', 't']"
+      ],
+      [
+        "`TYPING` git checkout -b add_utility_file",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` cd $(git rev-parse --show-toplevel)",
+        "`PRESS` enter"
+      ],
+      [
+        "`TYPING` nano plan.md",
+        "`PRESS` enter"
+      ],
+      [
+        "`HOTKEY` ['control', 'o']"
+      ],
+      [
+        "`PRESS` enter"
+      ],
+      [
+        "`HOTKEY` ['control', 'x']"
+      ]
+    ]
+  }
+}

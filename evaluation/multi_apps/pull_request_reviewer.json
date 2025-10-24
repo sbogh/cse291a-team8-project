@@ -1,9 +1,10 @@
 {
     "id": "pull_request_reviewer",
     "instruction": "I want you to retrieve the first pull request assigned to me. Open all of these pull requests and perform a review of the contents and either approve or request changes. If you approve and a developer has also approved the pull request merge the changes.",
-    "related_apps": ["os", "chrome"],
+    "related_apps": ["os", "chrome", "terminal"],
     "human-ground-truth": {
         "single-action": [
+            "`HOTKEY` ['control', 'alt', 't']",
             "`TYPING` PR_NUMBER=$(gh pr list --assignee @me --limit 1 --json number | jq -r '.[0].number')",
             "`PRESS` enter",
             "`TYPING` gh pr view PR_NUMBER",
@@ -19,6 +20,9 @@
             "`PRESS` enter"
         ],
         "grouped-action": [
+            [
+                "`HOTKEY` ['control', 'alt', 't']"
+            ],
             [
                 "`TYPING` PR_NUMBER=$(gh pr list --assignee @me --limit 1 --json number | jq -r '.[0].number')",
                 "`PRESS` enter"
